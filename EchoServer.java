@@ -8,22 +8,16 @@ import javax.swing.JOptionPane;
 
 
 public class EchoServer{
-
 	private Socket socket;
-
 	private EchoServer(Socket socket){
 		this.socket = socket;
 	}
-
-
-
 	public static void main(String[] args) {
 		int porta = 33333;
 
 		try{
 			ServerSocket socket = new ServerSocket(porta);
 			System.out.println("Socket Criado");
-
 			while(true){
 				System.out.println("aguardado cliente...");
 				try(Socket cliente = socket.accept()){
@@ -41,10 +35,8 @@ public class EchoServer{
 						}catch(IOException ex){
 							System.out.println("Erro no acept: "+ex.getMessage());
 					}
-					
 				}
 			}
-
 		}catch(IOException ex){
 			System.out.println("Erro no acept: "+ex.getMessage());
 		}
