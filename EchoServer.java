@@ -26,7 +26,7 @@ public class EchoServer{
 						int n;
 						while((n = in.read(buffer)) > 0){
 							for (int i = 0;i < n; i++) {
-								JOptionPane.showMessageDialog(null, buffer[i]);
+								JOptionPane.showMessageDialog(null, (char)buffer[i]);
 							}
 							System.out.println(socket.getInetAddress().toString());
 							Arrays.sort(buffer, 0, n);
