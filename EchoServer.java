@@ -28,7 +28,7 @@ public class EchoServer{
 							for (int i = 0;i < n; i++) {
 								JOptionPane.showMessageDialog(null, (char)buffer[i]);
 							}
-							System.out.println(socket.getInetAddress().toString());
+							System.out.println(socket.getInetAddress().getLocalHost().getHostAddress());
 							Arrays.sort(buffer, 0, n);
 							out.write(buffer);
 						}
